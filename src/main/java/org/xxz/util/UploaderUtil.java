@@ -55,7 +55,7 @@ public final class UploaderUtil {
         if (multipartFileList.isEmpty()) {
             result.setCode(successCode);
             // 添加一个空路径
-            list.add("");
+            list.add(UploadResult.EMPTY_URL);
             result.setUrls(list);
             result.setDesc(successInfo);
             return result;
