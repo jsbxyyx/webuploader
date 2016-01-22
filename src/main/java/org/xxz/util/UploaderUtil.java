@@ -88,14 +88,14 @@ public final class UploaderUtil {
                 }
                 /* 获取文件的后缀 */
                 String suffix = originalFilename.substring(originalFilename.lastIndexOf("."));
-                if (!allowedPattern.contains(suffix)) {
+                if (!allowedPattern.contains(suffix.toLowerCase())) {
                     result.setCode(UploadResult.CODE_1);
                     result.setUrls(null);
                     result.setDesc(UploadResult.DESC_1);
                     return result;
                 }
                 if (multipartFile.getSize() > fileSize) {
-                    result.setCode("2");
+                    result.setCode(UploadResult.CODE_2);
                     result.setUrls(null);
                     result.setDesc(String.format(UploadResult.DESC_2, fileSize));
                     return result;
