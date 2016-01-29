@@ -14,7 +14,7 @@
 	<mvc:annotation-driven />
 
 	<mvc:default-servlet-handler />
-	<mvc:resources location="/resources/**" mapping="/resources/**" />
+	<mvc:resources location="/resources/" mapping="/resources/**" />
 
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
